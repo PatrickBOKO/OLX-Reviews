@@ -1,0 +1,196 @@
+/* MainReviewForm block: align with .body-container margins from main.css */
+.mainblock.mainreviewform-container,
+.mainreviewform-container {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 20px 40px;
+  margin: 0 0 20px 0; /* Only vertical margin, left/right handled by .body-container */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Ensure .body-container applies the same margin to all sections (incl. MainReviewForm) */
+.body-container {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+/* Responsive: match .body-container behavior */
+@media (max-width: 1024px) {
+  .body-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .mainblock.mainreviewform-container,
+  .mainreviewform-container {
+    padding: 20px 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .body-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .mainblock.mainreviewform-container,
+  .mainreviewform-container {
+    max-width: 100vw;
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 2vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0;
+  }
+}
+
+.mainreviewform-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mainreviewform-delay-controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .mainreviewform-delay-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.mainreviewform-delay-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+  max-width: 200px;
+}
+
+.mainreviewform-delay-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.mainreviewform-delay-group select {
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: #f9fafb;
+  margin-bottom: 15px;
+  transition: all 0.2s ease;
+}
+
+.mainreviewform-delay-group select:hover {
+  border-color: #d1d5db;
+  background-color: #ffffff;
+}
+.mainreviewform-delay-group select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background-color: #ffffff;
+}
+
+.mainreviewform-editable-placeholder {
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: #f9fafb;
+  margin-bottom: 15px;
+  transition: all 0.2s ease;
+}
+.mainreviewform-editable-placeholder:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background-color: #ffffff;
+}
+
+.mainreviewform-form label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.mainreviewform-form input[type="text"],
+.mainreviewform-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  font-family: inherit;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.mainreviewform-form textarea {
+  min-height: 100px;
+}
+
+.mainreviewform-info-text {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: -8px;
+  margin-bottom: 12px;
+  font-style: italic;
+  font-family: inherit;
+}
+
+.mainreviewform-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.mainreviewform-form button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.mainreviewform-form button[type="submit"] {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+}
+.mainreviewform-form button[type="submit"]:hover {
+  background-color: #2563eb;
+}
+.mainreviewform-form button[type="button"] {
+  background-color: #ffffff;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+.mainreviewform-form button[type="button"]:hover {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+}

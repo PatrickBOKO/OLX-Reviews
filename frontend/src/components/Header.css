@@ -1,0 +1,225 @@
+header {
+    background-color: #fff;
+    color: #374151;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 35px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+  
+  header .logo {
+    font-size: 1.4rem;
+    color: #1e88e5;
+    font-weight: 500;
+    flex: 0 0 auto;
+    margin-right: auto;
+  }
+  
+  header nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: 0; /* Remove all margin */
+    border-radius: 16px; /* Add rounded borders to the nav bar */
+    background: #fff; /* Optional: keep nav bar background white for contrast */
+    padding: 4px 8px; /* Optional: some inner space for the rounded effect */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  
+  header .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    background: none;
+    border: none;
+  }
+  
+  header .nav-item:hover,
+  header .nav-item:focus {
+    background-color: #f3f4f6;
+    color: #111827;
+  }
+  
+  header .dropdown, 
+  header .date-picker {
+    position: relative;
+  }
+  
+  header .dropdown-toggle,
+  header .date-picker-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    color: #374151;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  header .dropdown-toggle.active,
+  header .date-picker-toggle.active {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+    color: #2563eb;
+  }
+  
+  header .dropdown-toggle:hover,
+  header .date-picker-toggle:hover {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+  }
+  
+  header .dropdown-content,
+  header .date-picker-dropdown {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    min-width: 180px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    z-index: 1000;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  
+  header .dropdown.open .dropdown-content,
+  header .date-picker.open .date-picker-dropdown {
+    display: block;
+  }
+  
+  header .dropdown-content a,
+  header .date-picker-dropdown a {
+    display: flex;
+    align-items: center;
+    color: #374151;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    background: none;
+    border: none;
+    transition: all 0.2s ease;
+  }
+  
+  header .dropdown-content a:hover,
+  header .date-picker-dropdown a:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+  }
+  
+  header .dropdown-content a.selected,
+  header .date-picker-dropdown a.selected {
+    background-color: #eff6ff;
+    color: #2563eb;
+    font-weight: 500;
+  }
+  
+  header .settings-icon {
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: none;
+    border: none;
+  }
+  
+  header .settings-icon:hover {
+    background-color: #f3f4f6;
+  }
+  
+  header .dropdown-toggle,
+  header .date-picker-toggle,
+  header .nav-item,
+  header .settings-icon {
+    outline: none;
+    border: none;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    header {
+      padding: 15px 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    header nav {
+      gap: 16px;
+    }
+    header .nav-item {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+    header .dropdown-toggle,
+    header .date-picker-toggle {
+      font-size: 0.9rem;
+      padding: 6px 12px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      padding: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    header nav {
+      width: 100%;
+      justify-content: center;
+      gap: 12px;
+    }
+    header .nav-item {
+      padding: 6px 10px;
+      font-size: 0.85rem;
+    }
+    header .dropdown-content,
+    header .date-picker-dropdown {
+      min-width: 160px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    header nav {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    header .nav-item {
+      width: 100%;
+      justify-content: center;
+    }
+    header .dropdown-content,
+    header .date-picker-dropdown {
+      position: static;
+      width: 100%;
+      margin-top: 5px;
+      box-shadow: none;
+      border: 1px solid #e5e7eb;
+    }
+    header .settings-icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+  }

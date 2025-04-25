@@ -1,0 +1,228 @@
+.review-platforms-modal-overlay {
+    position: fixed;
+    z-index: 1300;
+    inset: 0;
+    background: rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Make the panel narrower than SettingsModal.js (commonly 600px) */
+  .review-platforms-modal-panel {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 32px rgba(16,30,54,0.13), 0 1.5px 4px rgba(16,30,54,0.05);
+    width: 100%;
+    max-width: 500px; /* Was 600px, now smaller for a more compact popup */
+    padding: 28px 24px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', Arial, sans-serif;
+    position: relative;
+  }
+  
+  .review-platforms-header h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.22rem;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  .review-platforms-header p {
+    font-size: 0.97rem;
+    color: #42526e;
+    margin-bottom: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+  .mailbox-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 2px;
+    display: block;
+  }
+  .mailbox-input {
+    max-width: 80%; /* Set to 80% of modal width */
+    font-size: 1rem;
+    padding: 9px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background-color: #f9fafb;
+    margin-bottom: 18px;
+    margin-top: 2px;
+    transition: border 0.18s;
+    box-sizing: border-box;
+    display: block;
+  }
+  .mailbox-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #fff;
+  }
+  
+  .review-platforms-table-section {
+    margin: 0 0 14px 0;
+  }
+  
+  .table-title {
+    font-size: 1.01rem;
+    font-weight: 500;
+    margin-bottom: 7px;
+    color: #3b82f6;
+  }
+  
+  .review-platforms-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #f9fafb;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.97rem;
+    margin-bottom: 0;
+  }
+  .review-platforms-table th, .review-platforms-table td {
+    padding: 8px 6px;
+    text-align: left;
+  }
+  .review-platforms-table th {
+    background: #f3f4f6;
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.98rem;
+  }
+  .review-platforms-table tr:not(:last-child) td {
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .review-platforms-table td {
+    background: #fff;
+    color: #283041;
+    font-size: 0.97rem;
+  }
+  
+  .distribution-input {
+    width: 54px;
+    font-size: 0.97rem;
+    padding: 6px 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    text-align: right;
+    background: #f9fafb;
+    transition: border 0.15s;
+  }
+  .distribution-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #fff;
+  }
+  .url-input {
+    width: 96%;
+    font-size: 0.96rem;
+    padding: 6px 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    background: #f9fafb;
+    transition: border 0.15s;
+  }
+  .url-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #fff;
+  }
+  
+  .total-label {
+    font-weight: 600;
+    color: #374151;
+    background: #f8fafc;
+  }
+  .total-valid {
+    font-weight: 600;
+    color: #22c55e;
+    background: #f8fafc;
+  }
+  .total-invalid {
+    font-weight: 600;
+    color: #ef4444;
+    background: #f8fafc;
+  }
+  
+  .review-platforms-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 18px;
+  }
+  
+  /* Modern error message */
+.auth-error {
+  color: #fff;
+  background: #e74c3c;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1rem;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 12px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(231,76,60,0.08);
+  letter-spacing: 0.02em;
+}
+
+/* Modern test button (already styled inline, but you can add this for consistency) */
+.modern-btn {
+  padding: 7px 18px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.97rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+  .reset-btn {
+    background: #f3f4f6;
+    color: #374151;
+  }
+  .reset-btn:hover {
+    background: #e5e7eb;
+  }
+  .save-btn {
+    background: #3b82f6;
+    color: #fff;
+  }
+  .save-btn:disabled {
+    background: #a5b4fc;
+    cursor: not-allowed;
+  }
+  .save-btn:hover:enabled {
+    background: #2563eb;
+  }
+  .close-btn {
+    background: #f3f4f6;
+    color: #374151;
+  }
+  .close-btn:hover {
+    background: #e5e7eb;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .review-platforms-modal-panel {
+      max-width: 99vw;
+      padding: 10px 1vw 8px 1vw;
+    }
+    .table-title {
+      font-size: 0.98rem;
+    }
+    .review-platforms-header h3 {
+      font-size: 1rem;
+    }
+    .mailbox-input, .url-input, .distribution-input {
+      font-size: 0.94rem;
+    }
+    .mailbox-input {
+      width: 100%; /* Full width on mobile */
+    }
+  }

@@ -1,0 +1,6 @@
+{
+  "user123": [
+    { "platform": "eKomi", "distribution": 50, "url": "https://ekomi.com/review" },
+    { "platform": "Google", "distribution": 50, "url": "https://google.com/review" }
+  ]
+}

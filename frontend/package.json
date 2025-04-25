@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": "https://PatrickBOKO.github.io/my-react-app",
+  "homepage": "https://PatrickBOKO.github.io/olx-reviews",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",

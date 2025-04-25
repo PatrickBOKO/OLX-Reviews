@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": "http://olxreviews.ciphone.boutique",
+  "homepage": "https://PatrickBOKO.github.io/my-react-app",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -18,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts test",
-    "eject": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts eject"
+    "eject": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
